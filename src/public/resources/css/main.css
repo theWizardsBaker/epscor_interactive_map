@@ -1,0 +1,38 @@
+nav.navbar {
+  border-radius: 0; }
+
+nav .nav-logo {
+  height: 40px;
+  margin: 0 10px; }
+
+nav .navbar-right {
+  margin-right: 0; }
+
+section#field-display {
+  position: relative;
+  box-shadow: 1px 2px 2px black; }
+  section#field-display #field-selection {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    height: 100%; }
+    section#field-display #field-selection div.table-responsive {
+      text-align: center;
+      height: 100%;
+      overflow: hidden;
+      padding: 5px; }
+      section#field-display #field-selection div.table-responsive table {
+        height: 100%;
+        color: white; }
+        section#field-display #field-selection div.table-responsive table td {
+          vertical-align: middle;
+          width: 20%;
+          height: 20%;
+          border: none; }
+          section#field-display #field-selection div.table-responsive table td.element-hover {
+            color: white;
+            cursor: pointer;
+            border: 2px dashed white; }
+      section#field-display #field-selection div.table-responsive .glyphicon {
+        font-size: 2em;
+        text-shadow: 2px 1px 2px #222222; }

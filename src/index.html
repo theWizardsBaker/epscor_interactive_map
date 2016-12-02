@@ -6,34 +6,97 @@
         <title>EPSCoR Demo</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
        
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <!--<link rel="stylesheet" href="css/main.css"> -->
+        <link rel="stylesheet" href="public/resources/css/main.css"> 
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade bg-warning">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <navigation id="navigation">
-        	
-        </navigation>
+        <nav id="navigation" class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+			        	EPSCoR Collaboration
+			        </a>
+			    </div>
+	        	<div class="navbar-text navbar-right">
+	        		<img src="public/resources/images/logos/epscor_logo.png" alt="Missouri EPSCoR" class="nav-logo"/>
+	        		<img src="public/resources/images/logos/transect_logo.png" alt="Missouri Transect" class="nav-logo"/>
+	        		<img src="public/resources/images/logos/nsf_logo.png" alt="National Science Foundation" class="nav-logo"/>
+	        	</div>
+        	</div>
+        </nav>
 
-        <section id="main-content" >
-	        <div class="container-fluid">
-	  			<div class="row">
-	  				
-	  			</div>
+        <section id="main-content" class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<section id="field-display">
+						<div id="field-selection">
+							<div class="table-responsive">          
+								<table class="table">
+									<tbody>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="element-hover"><span class="glyphicon glyphicon-record" aria-hidden="true"></span></td>
+										</tr>
+										<tr>
+											<td><span class="glyphicon glyphicon-record" aria-hidden="true"></span></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td><span class="glyphicon glyphicon-record" aria-hidden="true"></span></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td><span class="glyphicon glyphicon-record" aria-hidden="true"></span></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div id="rgb-field">
+							<img src="public/resources/images/rgb_field.png" class="img-responsive rounded"/>
+						</div>
+					</section>
+				</div>
+				<div class="col-md-6">
+			        <section id="selection-info" class="information">
+			        	<figure>
+			        		<div class="drone-image">
+								<img src="public/resources/images/field_snip_hs.jpg" class="img-responsive info-image"/>
+							</div>
+							<figcaption>RGB NDVI PRI HS</figcaption>
+						</figure>
+			        </section>
+				</div>
 			</div>
         </section>
-
-        <aside id="info-aside" class="information">
-        	
-        </aside>
 
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
