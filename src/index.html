@@ -46,24 +46,16 @@
 											<td></td>
 											<td></td>
 											<td></td>
-											<td class="element-hover"><span class="glyphicon glyphicon-record" aria-hidden="true"></span></td>
+											<td class="content-region selected">
+												<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+												<span class="plot-title">Plot 1</span>
+											</td>
 										</tr>
 										<tr>
-											<td><span class="glyphicon glyphicon-record" aria-hidden="true"></span></td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td><span class="glyphicon glyphicon-record" aria-hidden="true"></span></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td></td>
+											<td class="content-region selected" style="border-color: orange; color: orange">
+												<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+												<span class="plot-title">Plot 2</span>
+											</td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -71,7 +63,27 @@
 										</tr>
 										<tr>
 											<td></td>
-											<td><span class="glyphicon glyphicon-record" aria-hidden="true"></span></td>
+											<td></td>
+											<td></td>
+											<td class="content-region">
+												<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+												<span class="plot-title">Plot 3</span>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="content-region">
+												<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+												<span class="plot-title">Plot 4</span>
+											</td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -87,13 +99,148 @@
 				</div>
 				<div class="col-md-6">
 			        <section id="selection-info" class="information">
-			        	<figure>
-			        		<div class="drone-image">
-								<img src="public/resources/images/field_snip_hs.jpg" class="img-responsive info-image"/>
+			        	
+			        	<div class="panel panel-default">
+
+				        	<div class="panel-heading">
+				        		<!-- <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+				        		<h3 class="panel-title">Plot Point 1</h3>
+				        	</div>
+
+				        	<div class="color-banding" style="display: block; background: lawngreen; height: 8px;">
+
+				        	</div>
+
+				        	<div class="container-fluid panel-body">
+				        		<div class="row info-display">
+					        		<div class="col-xs-12 col-sm-2 hidden-xs vcenter">
+										<div class="input-group">
+											<div class="btn-group-vertical" role="group" aria-label="..." >
+												<button class="btn btn-default active" type="button">RGB</button>
+												<button class="btn btn-default" type="button">NDVI</button>
+												<button class="btn btn-default" type="button">PRI</button>
+												<button class="btn btn-default" type="button">HS</button>
+											</div>
+										</div>
+									</div><!--
+					        		--><div class="col-xs-12 visible-xs">
+										<div class="input-group">
+											<div class="btn-group" role="group" aria-label="..." >
+												<button class="btn btn-default active" type="button">RGB</button>
+												<button class="btn btn-default" type="button">NDVI</button>
+												<button class="btn btn-default" type="button">PRI</button>
+												<button class="btn btn-default" type="button">HS</button>
+											</div>
+										</div>
+									</div><!--	        	
+					        		--><div class="col-xs-5 col-sm-4 vcenter drone-image">
+										<figure>
+							        		<div>
+												<img src="public/resources/images/field_snip_rgb.jpg" class="img-responsive info-image"/>
+											</div>
+										</figure>
+										<figcaption>RGB</figcaption>
+									</div><!--
+									--><div class="col-xs-7 col-sm-6 vcenter">
+										<figure>
+											<img src="public/resources/images/spectral_graph.png" class="img-responsive" />
+										</figure>
+									</div>
+								</div>
 							</div>
-							<figcaption>RGB NDVI PRI HS</figcaption>
-						</figure>
+
+							<div class="panel-body">
+								<p>
+									The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based
+									on a plant’s absorption and reflectance of light in near-infrared and red regions. 
+									This index uses reflectance values at 670 and 800 nanometers (nm) and ranges
+									from -1 to 1. The common range for vegetation is 0.2 to 0.8.
+								</p>
+							</div>	
+						</div>
 			        </section>
+
+			        <section id="selection-info" class="information">
+			        	
+			        	<div class="panel panel-default">
+
+				        	<div class="panel-heading">
+				        		<!-- <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+				        		<h3 class="panel-title">Plot Point 2</h3>
+				        	</div>
+
+				        	<div class="color-banding" style="display: block; background: orange; height: 8px;">
+
+				        	</div>
+
+				        	<div class="container-fluid panel-body">
+				        		<div class="row info-display">
+					        		<div class="col-xs-12 col-sm-2 hidden-xs vcenter">
+										<div class="input-group">
+											<div class="btn-group-vertical" role="group" aria-label="..." >
+												<button class="btn btn-default active" type="button">RGB</button>
+												<button class="btn btn-default" type="button">NDVI</button>
+												<button class="btn btn-default" type="button">PRI</button>
+												<button class="btn btn-default" type="button">HS</button>
+											</div>
+										</div>
+									</div><!--
+					        		--><div class="col-xs-12 visible-xs">
+										<div class="input-group">
+											<div class="btn-group" role="group" aria-label="..." >
+												<button class="btn btn-default active" type="button">RGB</button>
+												<button class="btn btn-default" type="button">NDVI</button>
+												<button class="btn btn-default" type="button">PRI</button>
+												<button class="btn btn-default" type="button">HS</button>
+											</div>
+										</div>
+									</div><!--	        	
+					        		--><div class="col-xs-5 col-sm-4 vcenter drone-image">
+										<figure>
+							        		<div>
+												<img src="public/resources/images/field_snip_rgb.jpg" class="img-responsive info-image"/>
+											</div>
+										</figure>
+										<figcaption>RGB</figcaption>
+									</div><!--
+									--><div class="col-xs-7 col-sm-6 vcenter">
+										<figure>
+											<img src="public/resources/images/spectral_graph.png" class="img-responsive" />
+										</figure>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-body">
+								<p>
+									The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based
+									on a plant’s absorption and reflectance of light in near-infrared and red regions. 
+									This index uses reflectance values at 670 and 800 nanometers (nm) and ranges
+									from -1 to 1. The common range for vegetation is 0.2 to 0.8.
+								</p>
+							</div>	
+						</div>
+			        </section>
+			        
+			        <section id="selection-info" class="information">
+			        	
+			        	<div class="panel panel-default">
+							<div class="panel-body">
+								<p>
+<!-- 									<figure>
+										<img src="public/resources/images/m100gFront.png">
+									</figure> -->
+									Some science info here describing the what the user should be looking at. I can animate and automatically make selections to point things out.
+								</p>
+								<ul>
+									<li><a href="#">Compare Plots 1 and 3</a></li>
+									<li><a href="#">Compare Plots 2 and 4</a></li>
+									<li><a href="#">Compare Plots 1 and 2</a></li>
+								</ul>
+							</div>	
+						</div>
+			        </section>
+
 				</div>
 			</div>
         </section>

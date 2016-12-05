@@ -1,5 +1,12 @@
 $field_hilight_color : white; //#d6e8f7
 
+
+div.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 nav {
 	&.navbar {
 		border-radius: 0;
@@ -42,10 +49,17 @@ section#field-display {
 					height: 20%;
 					border: none;
 
-					&.element-hover {
-						color: $field_hilight_color;
-						cursor: pointer;
-						border:  2px dashed $field_hilight_color;
+					&.content-region  {
+
+						&.selected {
+							border:  2px dashed #7cfc00;
+							color: #7cfc00;
+						}
+
+						&:hover {
+							border:  2px dashed $field_hilight_color;
+							cursor: pointer;
+						}
 					}
 				}
 			}
@@ -54,15 +68,39 @@ section#field-display {
 				font-size: 2em;
 				text-shadow: 2px 1px 2px #222222;
 			}
+
+			.plot-title {
+				display: block;
+			}
 		}
 	}
 }
 
 section#selection-info{
 
+	.close {
+		margin: -4px;
+	}
+
+	figure {
+		margin: 0px;
+		text-align: center;
+	}
+
+	.info-display {
+		text-align: center;
+	}
 
 	.drone-image {
 
+		figure {
+			border: 1px inset #dddddd;
+		    border-bottom: 0px;
+		}
 
+		figcaption {
+			border: 1px inset #dddddd;
+   			border-top: 0px;
+		}
 	}
 }

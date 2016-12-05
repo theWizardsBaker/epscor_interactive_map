@@ -1,3 +1,8 @@
+div.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+
 nav.navbar {
   border-radius: 0; }
 
@@ -29,10 +34,32 @@ section#field-display {
           width: 20%;
           height: 20%;
           border: none; }
-          section#field-display #field-selection div.table-responsive table td.element-hover {
-            color: white;
-            cursor: pointer;
-            border: 2px dashed white; }
+          section#field-display #field-selection div.table-responsive table td.content-region.selected {
+            border: 2px dashed #7cfc00;
+            color: #7cfc00; }
+          section#field-display #field-selection div.table-responsive table td.content-region:hover {
+            border: 2px dashed white;
+            cursor: pointer; }
       section#field-display #field-selection div.table-responsive .glyphicon {
         font-size: 2em;
         text-shadow: 2px 1px 2px #222222; }
+      section#field-display #field-selection div.table-responsive .plot-title {
+        display: block; }
+
+section#selection-info .close {
+  margin: -4px; }
+
+section#selection-info figure {
+  margin: 0px;
+  text-align: center; }
+
+section#selection-info .info-display {
+  text-align: center; }
+
+section#selection-info .drone-image figure {
+  border: 1px inset #dddddd;
+  border-bottom: 0px; }
+
+section#selection-info .drone-image figcaption {
+  border: 1px inset #dddddd;
+  border-top: 0px; }
