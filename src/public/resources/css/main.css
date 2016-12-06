@@ -63,3 +63,13 @@ section#selection-info .drone-image figure {
 section#selection-info .drone-image figcaption {
   border: 1px inset #dddddd;
   border-top: 0px; }
+
+section#selection-info .color-banding {
+  display: block;
+  background: lawngreen;
+  height: 8px; }
+
+section#selection-info .small-control {
+  margin-bottom: 15px; }
+  section#selection-info .small-control .input-group {
+    margin: auto; }

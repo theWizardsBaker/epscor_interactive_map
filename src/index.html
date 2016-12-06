@@ -10,11 +10,10 @@
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <link rel="stylesheet" href="public/resources/css/main.css"> 
     </head>
     <body>
-        <!--[if lt IE 8]>
+        <!--[if lt IE 10]>
             <p class="browserupgrade bg-warning">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
@@ -96,18 +95,40 @@
 							<img src="public/resources/images/rgb_field.png" class="img-responsive rounded"/>
 						</div>
 					</section>
+
+					<section id="drone-display">
+						<div class="row">
+							<div class="col-xs-6">
+								<figure>
+									<img class="img-responsive" src="public/resources/images/drones/dji_s900.jpg">
+								<figcaption>DJI S900</figcaption>
+								</figure>
+							</div>
+							<div class="col-xs-6">
+								<figure>
+									<img class="img-responsive" src="public/resources/images/drones/dji_s1000.jpg">
+									<figcaption>DJI S10000</figcaption>
+								</figure>
+							</div>
+						</div>
+						<p>
+							The drones used are DJI S900 and DJI S10000 models. More info can be provided here. Maybe a video of them in flight.
+						</p>
+					</section>
 				</div>
+
+
 				<div class="col-md-6">
 			        <section id="selection-info" class="information">
 			        	
 			        	<div class="panel panel-default">
 
 				        	<div class="panel-heading">
-				        		<!-- <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+				        		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				        		<h3 class="panel-title">Plot Point 1</h3>
 				        	</div>
 
-				        	<div class="color-banding" style="display: block; background: lawngreen; height: 8px;">
+				        	<div class="color-banding">
 
 				        	</div>
 
@@ -123,7 +144,7 @@
 											</div>
 										</div>
 									</div><!--
-					        		--><div class="col-xs-12 visible-xs">
+					        		--><div class="col-xs-12 visible-xs small-control">
 										<div class="input-group">
 											<div class="btn-group" role="group" aria-label="..." >
 												<button class="btn btn-default active" type="button">RGB</button>
@@ -138,70 +159,8 @@
 							        		<div>
 												<img src="public/resources/images/field_snip_rgb.jpg" class="img-responsive info-image"/>
 											</div>
+											<figcaption>RGB</figcaption>
 										</figure>
-										<figcaption>RGB</figcaption>
-									</div><!--
-									--><div class="col-xs-7 col-sm-6 vcenter">
-										<figure>
-											<img src="public/resources/images/spectral_graph.png" class="img-responsive" />
-										</figure>
-									</div>
-								</div>
-							</div>
-
-							<div class="panel-body">
-								<p>
-									The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based
-									on a plant’s absorption and reflectance of light in near-infrared and red regions. 
-									This index uses reflectance values at 670 and 800 nanometers (nm) and ranges
-									from -1 to 1. The common range for vegetation is 0.2 to 0.8.
-								</p>
-							</div>	
-						</div>
-			        </section>
-
-			        <section id="selection-info" class="information">
-			        	
-			        	<div class="panel panel-default">
-
-				        	<div class="panel-heading">
-				        		<!-- <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-				        		<h3 class="panel-title">Plot Point 2</h3>
-				        	</div>
-
-				        	<div class="color-banding" style="display: block; background: orange; height: 8px;">
-
-				        	</div>
-
-				        	<div class="container-fluid panel-body">
-				        		<div class="row info-display">
-					        		<div class="col-xs-12 col-sm-2 hidden-xs vcenter">
-										<div class="input-group">
-											<div class="btn-group-vertical" role="group" aria-label="..." >
-												<button class="btn btn-default active" type="button">RGB</button>
-												<button class="btn btn-default" type="button">NDVI</button>
-												<button class="btn btn-default" type="button">PRI</button>
-												<button class="btn btn-default" type="button">HS</button>
-											</div>
-										</div>
-									</div><!--
-					        		--><div class="col-xs-12 visible-xs">
-										<div class="input-group">
-											<div class="btn-group" role="group" aria-label="..." >
-												<button class="btn btn-default active" type="button">RGB</button>
-												<button class="btn btn-default" type="button">NDVI</button>
-												<button class="btn btn-default" type="button">PRI</button>
-												<button class="btn btn-default" type="button">HS</button>
-											</div>
-										</div>
-									</div><!--	        	
-					        		--><div class="col-xs-5 col-sm-4 vcenter drone-image">
-										<figure>
-							        		<div>
-												<img src="public/resources/images/field_snip_rgb.jpg" class="img-responsive info-image"/>
-											</div>
-										</figure>
-										<figcaption>RGB</figcaption>
 									</div><!--
 									--><div class="col-xs-7 col-sm-6 vcenter">
 										<figure>
@@ -227,9 +186,6 @@
 			        	<div class="panel panel-default">
 							<div class="panel-body">
 								<p>
-<!-- 									<figure>
-										<img src="public/resources/images/m100gFront.png">
-									</figure> -->
 									Some science info here describing the what the user should be looking at. I can animate and automatically make selections to point things out.
 								</p>
 								<ul>
@@ -247,7 +203,65 @@
 
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <!-- <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="public/resources/js/template7.js"></script>
         <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script> -->
+
+		<script id="plot_template" type="text/template7">
+			<section id="selection-info" class="information">
+	        	<div class="panel panel-default">
+
+		        	<div class="panel-heading">
+		        		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        		<h3 class="panel-title">{{title}}</h3>
+		        	</div>
+
+		        	<div class="color-banding" style="background: {{color}};"></div>
+
+		        	<div class="container-fluid panel-body">
+		        		<div class="row info-display">
+			        		<div class="col-xs-12 col-sm-2 hidden-xs vcenter">
+								<div class="input-group wavelength_selection">
+									<div class="btn-group-vertical" role="group" aria-label="..." >
+										<button class="btn btn-default {{isActive wavelength 'rgb' }}" type="button">RGB</button>
+										<button class="btn btn-default {{isActive wavelength 'ndvi' }}" type="button">NDVI</button>
+										<button class="btn btn-default {{isActive wavelength 'pri' }}" type="button">PRI</button>
+										<button class="btn btn-default {{isActive wavelength 'hs' }}" type="button">HS</button>
+									</div>
+								</div>
+							</div><!--
+			        		--><div class="col-xs-12 visible-xs small-control">
+								<div class="input-group wavelength_selection">
+									<div class="btn-group" role="group" aria-label="..." >
+										<button class="btn btn-default {{isActive wavelength 'rgb' }}" type="button">RGB</button>
+										<button class="btn btn-default {{isActive wavelength 'ndvi' }}" type="button">NDVI</button>
+										<button class="btn btn-default {{isActive wavelength 'pri' }}" type="button">PRI</button>
+										<button class="btn btn-default {{isActive wavelength 'hs' }}" type="button">HS</button>
+									</div>
+								</div>
+							</div><!--	        	
+			        		--><div class="col-xs-5 col-sm-4 vcenter drone-image">
+								<figure>
+					        		<div>
+										<img src="wavelength_img" class="img-responsive info-image"/>
+									</div>
+									<figcaption>{{capitalize wavelength }}</figcaption>
+								</figure>
+							</div><!--
+							--><div class="col-xs-7 col-sm-6 vcenter">
+								<figure>
+									<img src="{{spectral_img}}" class="img-responsive" />
+								</figure>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel-body">
+						<p>{{body}}</p>
+					</div>
+
+				</div>
+	        </section>
+		</script>
     </body>
 </html>

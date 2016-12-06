@@ -103,4 +103,18 @@ section#selection-info{
    			border-top: 0px;
 		}
 	}
+
+	.color-banding {
+		display: block; 
+		background: lawngreen; 
+		height: 8px;
+	}
+
+	.small-control {
+		margin-bottom: 15px;
+
+		.input-group {
+			margin: auto;
+		}
+	}
 }
