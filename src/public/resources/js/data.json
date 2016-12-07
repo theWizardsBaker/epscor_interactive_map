@@ -1,0 +1,69 @@
+var colab_obj = {
+	"grid" : [5, 5],
+	"plots" : [
+		{
+			"id" : "plotting",
+			"title" : "Plot Point x",
+			"grid_location" : [0, 4],
+			"color" : "#7cfc00",
+			"spectrum" : [
+				{ 
+					"type" : "RGB",
+					"camera_image" : "field_snip_rgb.jpg",
+					"graph_image" : "spectral_graph.png",
+					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+				},
+				{ 
+					"type" : "NDVI",
+					"camera_image" : "field_snip_ndvi.jpg",
+					"graph_image" : "spectral_graph.png",
+					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+				},
+				{ 
+					"type" : "PRI",
+					"camera_image" : "field_snip_pri.jpg",
+					"graph_image" : "spectral_graph.png",
+					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+				},
+				{ 
+					"type" : "HS",
+					"camera_image" : "field_snip_hs.jpg",
+					"graph_image" : "spectral_graph.png",
+					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+				}
+			]
+		},
+		{
+			"id" : "something",
+			"title" : "Plot Point y",
+			"grid_location" : [1, 1],
+			"color" : "lawngreen",
+			"spectrum" : [
+				{ 
+					"type" : "RGB",
+					"camera_image" : "sdfsdf",
+					"graph_image" : "sfesf",
+					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+				},
+				{ 
+					"type" : "NDVI",
+					"camera_image" : "sdfsdf",
+					"graph_image" : "sfesf",
+					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+				},
+				{ 
+					"type" : "PRI",
+					"camera_image" : "sdfsdf",
+					"graph_image" : "sfesf",
+					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+				},
+				{ 
+					"type" : "HS",
+					"camera_image" : "sdfsdf",
+					"graph_image" : "sfesf",
+					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+				}
+			]
+		}
+	]
+}

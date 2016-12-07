@@ -52,8 +52,8 @@ section#field-display {
 					&.content-region  {
 
 						&.selected {
-							border:  2px dashed #7cfc00;
-							color: #7cfc00;
+							border:  2px dashed $field_hilight_color;
+							color: $field_hilight_color;
 						}
 
 						&:hover {
