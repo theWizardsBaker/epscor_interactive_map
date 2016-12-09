@@ -1,7 +1,16 @@
+body {
+  background-color: #e2e2e2; }
+  body .panel {
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.3); }
+
 div.vcenter {
   display: inline-block;
   vertical-align: middle;
   float: none; }
+
+.panel-content {
+  border-top: 1px solid #ddd;
+  padding-top: 20px; }
 
 nav.navbar {
   border-radius: 0; }
@@ -13,19 +22,24 @@ nav .nav-logo {
 nav .navbar-right {
   margin-right: 0; }
 
+nav .navbar-header {
+  margin-top: 10px; }
+
 section#field-display {
-  position: relative;
-  box-shadow: 1px 2px 2px black; }
+  position: relative; }
+  section#field-display .panel-body {
+    padding: 5px; }
   section#field-display #field-selection {
     position: absolute;
     width: 100%;
     min-height: 100%;
     height: 100%; }
     section#field-display #field-selection div.table-responsive {
-      text-align: center;
       height: 100%;
+      width: 98%;
+      text-align: center;
       overflow: hidden;
-      padding: 5px; }
+      padding: 6px 2px; }
       section#field-display #field-selection div.table-responsive table {
         height: 100%;
         color: white; }
@@ -33,43 +47,62 @@ section#field-display {
           vertical-align: middle;
           width: 20%;
           height: 20%;
-          border: none; }
-          section#field-display #field-selection div.table-responsive table td.content-region.selected {
-            border: 2px dashed #7cfc00;
-            color: #7cfc00; }
-          section#field-display #field-selection div.table-responsive table td.content-region:hover {
-            border: 2px dashed white;
-            cursor: pointer; }
-      section#field-display #field-selection div.table-responsive .glyphicon {
-        font-size: 2em;
-        text-shadow: 2px 1px 2px #222222; }
-      section#field-display #field-selection div.table-responsive .plot-title {
-        display: block; }
+          position: relative;
+          border: 0px; }
+          section#field-display #field-selection div.table-responsive table td.content-region div.plot-delim {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(0.1);
+            transition: transform .3s ease-in-out;
+            color: transparent; }
+            section#field-display #field-selection div.table-responsive table td.content-region div.plot-delim.hover {
+              border: 2px dashed white;
+              color: white;
+              cursor: pointer;
+              -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+              transform: scale(1); }
+            section#field-display #field-selection div.table-responsive table td.content-region div.plot-delim.selected {
+              border: 2px dashed white;
+              color: white;
+              cursor: pointer;
+              transform: scale(1); }
+          section#field-display #field-selection div.table-responsive table td.content-region .glyphicon {
+            font-size: 2em;
+            text-shadow: 2px 1px 2px #222222; }
+          section#field-display #field-selection div.table-responsive table td.content-region .plot-title {
+            display: block;
+            text-shadow: 2px 1px 2px #222222; }
 
-section#selection-info .close {
+section#selection-info .info-window .panel-heading .close {
   margin: -4px; }
 
-section#selection-info figure {
-  margin: 0px;
-  text-align: center; }
+section#selection-info .info-window .panel-heading:hover {
+  cursor: move; }
 
-section#selection-info .info-display {
-  text-align: center; }
-
-section#selection-info .drone-image figure {
-  border: 1px inset #dddddd;
-  border-bottom: 0px; }
-
-section#selection-info .drone-image figcaption {
-  border: 1px inset #dddddd;
-  border-top: 0px; }
-
-section#selection-info .color-banding {
+section#selection-info .info-window .color-banding {
   display: block;
   background: lawngreen;
   height: 8px; }
 
-section#selection-info .small-control {
+section#selection-info .info-window .panel-body img.spectrum, section#selection-info .info-window .panel-body p.spectrum {
+  display: none; }
+
+section#selection-info .info-window .panel-body img.active, section#selection-info .info-window .panel-body p.active {
+  display: block; }
+
+section#selection-info .info-window .panel-body figure {
+  margin: 0px;
+  text-align: center;
+  border: 1px solid #dddddd; }
+
+section#selection-info .info-window .panel-body .info-display {
+  text-align: center; }
+
+section#selection-info .info-window .panel-body .small-control {
   margin-bottom: 15px; }
-  section#selection-info .small-control .input-group {
+  section#selection-info .info-window .panel-body .small-control .input-group {
     margin: auto; }

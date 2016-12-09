@@ -1,10 +1,22 @@
 $field_hilight_color : white; //#d6e8f7
 
+body {
+	background-color: #e2e2e2;
+
+		.panel {
+		    box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+		}
+}
 
 div.vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
+}
+
+.panel-content {
+	border-top: 1px solid #ddd;
+	padding-top: 20px;
 }
 
 nav {
@@ -20,12 +32,19 @@ nav {
 	.navbar-right {
     	margin-right: 0; 
 	}
+
+	.navbar-header {
+		margin-top: 10px;
+	}
 }
 
 section#field-display {
 
 	position: relative;
-	box-shadow: 1px 2px 2px black;
+
+	.panel-body {
+		padding: 5px;
+	}
 
 	#field-selection {
 		position: absolute;
@@ -34,10 +53,11 @@ section#field-display {
 		height: 100%;
 
 		div.table-responsive{
-			text-align: center;
 			height: 100%;
+		    width: 98%;
+			text-align: center;
 			overflow: hidden;
-			padding: 5px;
+		    padding: 6px 2px;
 
 			table {
 				height: 100%;
@@ -47,30 +67,50 @@ section#field-display {
 					vertical-align: middle;
 					width: 20%;
 					height: 20%;
-					border: none;
+					position: relative;
+					border: 0px;
 
 					&.content-region  {
 
-						&.selected {
-							border:  2px dashed $field_hilight_color;
-							color: $field_hilight_color;
+						div.plot-delim {
+							height: 100%;
+							width: 100%;
+							position: absolute;
+							top:0;
+							left: 0;
+						    transform: scale(0.1);
+						    transition: transform .3s ease-in-out;
+						    color: transparent;
+
+							&.hover {
+								border:  2px dashed $field_hilight_color;
+								color: $field_hilight_color;
+								cursor: pointer;
+								-webkit-transform: scale(1);
+						        -ms-transform: scale(1);
+						        transform: scale(1);
+							}	
+
+							&.selected {
+								border:  2px dashed $field_hilight_color;
+								color: $field_hilight_color;
+								cursor: pointer;
+								transform: scale(1);
+							}
 						}
 
-						&:hover {
-							border:  2px dashed $field_hilight_color;
-							cursor: pointer;
+						.glyphicon {
+							font-size: 2em;
+							text-shadow: 2px 1px 2px #222222;
 						}
+
+						.plot-title {
+							display: block;
+							text-shadow: 2px 1px 2px #222222;
+						}
+
 					}
 				}
-			}
-
-			.glyphicon {
-				font-size: 2em;
-				text-shadow: 2px 1px 2px #222222;
-			}
-
-			.plot-title {
-				display: block;
 			}
 		}
 	}
@@ -78,43 +118,58 @@ section#field-display {
 
 section#selection-info{
 
-	.close {
-		margin: -4px;
-	}
+	.info-window {
 
-	figure {
-		margin: 0px;
-		text-align: center;
-	}
+		.panel-heading {
 
-	.info-display {
-		text-align: center;
-	}
+			.close {
+				margin: -4px;
+			}
 
-	.drone-image {
+			&:hover {
+				cursor: move;
+			}
 
-		figure {
-			border: 1px inset #dddddd;
-		    border-bottom: 0px;
 		}
 
-		figcaption {
-			border: 1px inset #dddddd;
-   			border-top: 0px;
+		.color-banding {
+			display: block; 
+			background: lawngreen; 
+			height: 8px;
 		}
-	}
 
-	.color-banding {
-		display: block; 
-		background: lawngreen; 
-		height: 8px;
-	}
+		.panel-body {
 
-	.small-control {
-		margin-bottom: 15px;
+			img, p {
 
-		.input-group {
-			margin: auto;
+				&.spectrum {
+					display: none;
+				}
+
+				&.active {
+					display: block;
+				}
+			}
+
+			figure {
+				margin: 0px;
+				text-align: center;
+				border: 1px solid #dddddd;
+			}
+
+			.info-display {
+				text-align: center;
+			}
+
+			.small-control {
+				margin-bottom: 15px;
+
+				.input-group {
+					margin: auto;
+				}
+			}
+
 		}
+
 	}
 }

@@ -34,94 +34,42 @@
 		<section id="main-content" class="container-fluid">
 			<div class="row">
 				<div class="col-md-6">
-					<section id="field-display">
-						<div id="field-selection">
-							<div class="table-responsive">          
-								<table class="table">
-									<tbody>
-										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td class="content-region selected">
-												<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-												<span class="plot-title">Plot 1</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="content-region">
-												<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-												<span class="plot-title">Plot 2</span>
-											</td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td class="content-region">
-												<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-												<span class="plot-title">Plot 3</span>
-											</td>
-											<td></td>
-										</tr>
-										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td></td>
-											<td class="content-region">
-												<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-												<span class="plot-title">Plot 4</span>
-											</td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-									</tbody>
-								</table>
+					<section id="field-display" class="panel panel-default">
+						<div class="panel-body">
+							<div id="field-selection">
+							</div>
+							<div id="rgb-field">
+								<img src="public/resources/images/rgb_field.png" class="img-responsive rounded"/>
 							</div>
 						</div>
-						<div id="rgb-field">
-							<img src="public/resources/images/rgb_field.png" class="img-responsive rounded"/>
+					</section>
+					<section id="drone-display" class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-6">
+									<figure>
+										<img class="img-responsive" src="public/resources/images/drones/dji_s900.jpg">
+									<figcaption>DJI S900</figcaption>
+									</figure>
+								</div>
+								<div class="col-xs-6">
+									<figure>
+										<img class="img-responsive" src="public/resources/images/drones/dji_s1000.jpg">
+										<figcaption>DJI S10000</figcaption>
+									</figure>
+								</div>
+							</div>
+							<div class="panel-content">
+								<p>
+									The drones used are DJI S900 and DJI S10000 models. More info can be provided here. Maybe a video of them in flight.
+								</p>
+							</div>
 						</div>
 					</section>
 
-					<section id="drone-display">
-						<div class="row">
-							<div class="col-xs-6">
-								<figure>
-									<img class="img-responsive" src="public/resources/images/drones/dji_s900.jpg">
-								<figcaption>DJI S900</figcaption>
-								</figure>
-							</div>
-							<div class="col-xs-6">
-								<figure>
-									<img class="img-responsive" src="public/resources/images/drones/dji_s1000.jpg">
-									<figcaption>DJI S10000</figcaption>
-								</figure>
-							</div>
-						</div>
-						<div>
-							<p>
-								The drones used are DJI S900 and DJI S10000 models. More info can be provided here. Maybe a video of them in flight.
-							</p>
-						</div>
-					</section>
 				</div>
-
-
 				<div class="col-md-6">
 					<section id="selection-info" class="information">
-
 					</section>
 					
 					<section class="information">
@@ -142,40 +90,35 @@
 			</div>
 		</section>
 
-		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+
+		<script src="http://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+		<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		<script src="public/resources/js/template7.js"></script>
 		<script src="public/resources/js/data.json"></script>
-		<script type="text/javascript">
 
-			Template7.registerHelper('isActive', function (elm, test) {
-				return ( elm == tst ? "active" : "" );
-			});
-
-			Template7.registerHelper('capitalize', function (elm) {
-				return elm.toUpperCase();
-			});
-
-			Template7.registerPartial('spectrum_button', "<button class=\"btn btn-default {{active}}\" type=\"button\">{{type}}</button>");
-			
-			$(document).ready(function() {
-				// get the html
-				var plot_template = $("#plot_template").html();
-				// compile the plot
-				var compiled_plot = Template7.compile(plot_template);
-				// load the template
-				$('#selection-info').append(compiled_plot($.extend(colab_obj.plots[0], { "selection" : 1 })));
-
-			});
-
+		<script id="spectrum_button" type="text/template7">
+			<button class="btn btn-default spectrum-select {{isActive @index @root.selection}}" value="{{@index}}" type="button">{{type}}</button>
 		</script>
 
-
-		<!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script> -->
-
 		<script id="plot_template" type="text/template7">
-				<div id="{{id}}" class="panel panel-default">
+			<div class="table-responsive">          
+				<table class="table">
+					<tbody>
+						{{#buildTable grid plots}}
+							<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+							<span class="plot-title">{{title}}</span>
+							<div class="plot-delim"></div>
+						{{/buildTable}}
+					</tbody>
+				</table>
+			</div>
+		</script>
+
+		<script id="spectrum_template" type="text/template7">
+				<div id="{{id}}" class="panel panel-default info-window">
 
 					<div class="panel-heading">
 						<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -190,41 +133,190 @@
 								<div class="input-group wavelength_selection">
 									<div class="btn-group-vertical" role="group" aria-label="..." >
 									{{#each spectrum}}
-										{{> "spectrum_button"}}
+										{{> "spectrumButton"}}
 									{{/each}}
 									</div>
 								</div>
 							</div><!--
-							--><div class="col-xs-12 visible-xs small-control">
+						 --><div class="col-xs-12 visible-xs small-control">
 								<div class="input-group wavelength_selection">
 									<div class="btn-group" role="group" aria-label="..." >								
 									{{#each spectrum}}
-										{{> "spectrum_button"}}
+										{{> "spectrumButton"}}
 									{{/each}}
 									</div>
 								</div>
 							</div><!--	        	
-							--><div class="col-xs-5 col-sm-4 vcenter drone-image">
+						 --><div class="col-xs-5 col-sm-4 vcenter drone-image">
 								<figure>
 									<div>
-										<img src="public/resources/images/{{spectrum[@root.selection].camera_image}}" class="img-responsive info-image"/>
+										{{#each spectrum}}
+											<img src="public/resources/images/{{camera_image}}" class="img-responsive spectrum {{isActive @index @root.selection}}"/>
+										{{/each}}
 									</div>
-									<figcaption>{{capitalize spectrum[1].type}}</figcaption>
 								</figure>
 							</div><!--
-							--><div class="col-xs-7 col-sm-6 vcenter">
+						 --><div class="col-xs-7 col-sm-6 vcenter ">
 								<figure>
-									<img src="public/resources/images/{{spectrum[1].graph_image}}" class="img-responsive" />
+									<div>
+										{{#each spectrum}}
+											<img src="public/resources/images/{{graph_image}}" class="img-responsive spectrum {{isActive @index @root.selection}}" />
+										{{/each}}
+									</div>
 								</figure>
 							</div>
 						</div>
 					</div>
 
-					<div class="panel-body">
-						<p>{{spectrum[1].description}}</p>
+					<div class="panel-body panel-content">
+						{{#each spectrum}}
+							<p class="descr spectrum {{isActive @index @root.selection}}">{{description}}</p>
+						{{/each}}
 					</div>
 
 				</div>
 		</script>
+
+		<script type="text/javascript">
+
+			Template7.registerHelper('isActive', function (str1, str2, options) {
+				return ( str1 == str2 ? 'active' : '' );
+			});
+
+			Template7.registerHelper('capitalize', function (options) {
+  				var res = options.fn(this, options.data);
+				return res.toUpperCase();
+			});
+
+			Template7.registerHelper('getArrayElement', function (arr, index, options) {
+				return options.fn(arr[index]);
+			});
+
+			Template7.registerHelper('buildTable', function (dimensions, plots, options) {
+				var output = "";
+				// walk the row
+				for(var row = 0; row < dimensions[0]; row++){
+					output += "<tr>";
+					// walk the column
+					for(var col = 0; col < dimensions[1]; col++){
+						var table_data = "";
+						// if we have a plot point, print it and then remove it from our array
+						for(var point = 0; point < plots.length; point++){
+							if(plots[point].grid_location[0] == row && plots[point].grid_location[1] == col){
+								table_data += "<td data-id='" + plots[point].id + "' class='content-region'>";
+								table_data += options.fn(plots[point], options.data);
+								table_data += "</td>"
+							}
+						}
+						output += (table_data.length > 0) ? table_data : "<td></td>";
+					}
+					output += "</tr>";
+				}
+				return output;
+			});
+
+			Template7.registerPartial('spectrumButton', $('#spectrum_button').html());
+
+			Template7.registerPartial('tablePlot', $('#plot_table_element').html());
+
+			
+			$(document).ready(function() {
+
+				/*
+
+				startup 
+				
+				*/
+
+				// colab_obj comes from the .json file. It is the name of the variable
+				// get the html
+				var spectrum_template = $("#spectrum_template").html();
+				// compile the plot
+				var compiled_spectrum_template = Template7.compile(spectrum_template);
+
+				// get the html for the plot
+				var plot_template = $("#plot_template").html();
+				// compile the plotting table
+				var compiled_plot_template = Template7.compile(plot_template);
+				// add the generated html to the page
+				$('#field-selection').html(compiled_plot_template(colab_obj));
+
+				/*
+
+				helpers
+
+				*/
+
+
+				var find_plot = function(plots, id){
+					return $.grep(plots, function(elm, ind){ return elm.id == id; })[0];
+				};
+
+				var select_spectrum = function(plot, spectrum) {		
+					plot.selection = spectrum || 0;
+					return compiled_spectrum_template(plot);
+				};
+
+				/*
+				
+				event handlers
+
+				*/
+
+
+				$('#selection-info')
+				.on('click', 'button.spectrum-select', function(){
+					// if we didn't click on the currently selected
+					if(!$(this).hasClass('selected')){
+						// get the parent panel
+						var spectrum_panel = $(this).parents('div.panel.info-window');
+						// find the plot element
+						var plot = find_plot(colab_obj.plots, spectrum_panel.attr('id'));
+						// get the template and replace it
+						$(spectrum_panel).replaceWith(select_spectrum(plot, $(this).attr('value')));
+					}
+				})
+				.on('click', 'button.close', function() {
+					var parent_panel_id = $(this).parents('div.panel.info-window').attr('id');
+					$('td.content-region.selected').filter("[data-id=" + parent_panel_id + "]").click();
+				})
+				.sortable({
+					opacity: 0.8,
+					handle: ".panel-heading"
+				});
+
+
+
+				// mouse and click elements for the field items
+				$('#field-display')
+				.on('mouseover', 'td.content-region', function() {
+					$(this).find('div.plot-delim').not(".selected").addClass('hover');
+				})
+				.on('mouseout', 'td.content-region', function() {
+					$(this).find('div.plot-delim').removeClass('hover');
+				})
+				.on('click', 'td.content-region', function(){
+					// get the plot's delimiters and select it
+					$(this).toggleClass('selected').find('div.plot-delim').toggleClass('selected');
+					//if we just selected it, add the spectrum
+					if($(this).hasClass('selected')){
+						// find the plot element
+						var plot = find_plot(colab_obj.plots, $(this).data('id'));
+						// set the selection colors
+						$(this).css( 'color', plot.color ).find('div.plot-delim').css('border-color',plot.color);
+						// append a new spectrum window
+						$('#selection-info').append(select_spectrum(plot));
+					} else {
+						// set our colors back to white
+						$(this).css( 'color', 'white' ).find('div.plot-delim').css('border-color','white');
+						// remove the element
+						var id = $(this).data('id');
+						$('#' + id).remove();
+					}
+				});
+
+			});
+		</script>
+
 	</body>
 </html>
