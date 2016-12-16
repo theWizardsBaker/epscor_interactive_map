@@ -23,6 +23,11 @@
 						EPSCoR Collaboration
 					</a>
 				</div>
+				<ul class="navbar-text nav nav-pills">
+					<li role="presentation" class="active" data-panel="map"><a href="#">Home</a></li>
+					<li role="presentation" data-panel="drone"><a href="#">Drones</a></li>
+					<li role="presentation" data-panel="about"><a href="#">About</a></li>
+				</ul>
 				<div class="navbar-text navbar-right">
 					<img src="public/resources/images/logos/epscor_logo.png" alt="Missouri EPSCoR" class="nav-logo"/>
 					<img src="public/resources/images/logos/transect_logo.png" alt="Missouri Transect" class="nav-logo"/>
@@ -32,47 +37,10 @@
 		</nav>
 
 		<section id="main-content" class="container-fluid">
-			<div class="row">
-				<div class="col-md-6">
-					<section id="field-display" class="panel panel-default">
-						<div class="panel-body">
-							<div id="field-selection">
-							</div>
-							<div id="rgb-field">
-								<img src="public/resources/images/rgb_field.png" class="img-responsive rounded"/>
-							</div>
-						</div>
-					</section>
-					<section id="drone-display" class="panel panel-default">
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-xs-6">
-									<figure>
-										<img class="img-responsive" src="public/resources/images/drones/dji_s900.jpg">
-									<figcaption>DJI S900</figcaption>
-									</figure>
-								</div>
-								<div class="col-xs-6">
-									<figure>
-										<img class="img-responsive" src="public/resources/images/drones/dji_s1000.jpg">
-										<figcaption>DJI S10000</figcaption>
-									</figure>
-								</div>
-							</div>
-							<div class="panel-content">
-								<p>
-									The drones used are DJI S900 and DJI S10000 models. More info can be provided here. Maybe a video of them in flight.
-								</p>
-							</div>
-						</div>
-					</section>
 
-				</div>
-				<div class="col-md-6">
-					<section id="selection-info" class="information">
-					</section>
-					
-					<section class="information">
+			<div id="map" class="display-element">
+				<div class="row">
+					<section class="information col-md-12">
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<p>
@@ -86,10 +54,61 @@
 							</div>	
 						</div>
 					</section>
+
+					<div class="col-md-6">
+						<section id="field-display" class="panel panel-default">
+							<div class="panel-body">
+								<div id="field-selection">
+								</div>
+								<div id="rgb-field">
+									<img src="public/resources/images/rgb_field.png" class="img-responsive rounded"/>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="col-md-6">
+						<section id="selection-info" class="information">
+						</section>
+					</div>
+				</div>
+			</div>
+
+			<div id="drone" class="display-element">
+				<div class="row">
+					<section id="drone-display" class="col-xs-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<figure>
+											<img class="img-responsive" src="public/resources/images/drones/dji_s900.jpg">
+										<figcaption>DJI S900</figcaption>
+										</figure>
+									</div>
+									<div class="col-sm-6">
+										<figure>
+											<img class="img-responsive" src="public/resources/images/drones/dji_s1000.jpg">
+											<figcaption>DJI S10000</figcaption>
+										</figure>
+									</div>
+								</div>
+								<div class="panel-content">
+									<p>
+										The drones used are DJI S900 and DJI S10000 models. More info can be provided here. Maybe a video of them in flight.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+			<div id="about" class="display-element">
+				<div class="panel panel-default">
+					
 				</div>
 			</div>
 		</section>
-
 
 
 		<script src="http://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
@@ -98,6 +117,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		<script src="public/resources/js/template7.js"></script>
 		<script src="public/resources/js/data.json"></script>
+
 
 		<script id="spectrum_button" type="text/template7">
 			<button class="btn btn-default spectrum-select {{isActive @index @root.selection}}" value="{{@index}}" type="button">{{type}}</button>
@@ -128,7 +148,9 @@
 					<div class="color-banding" style="background: {{color}};"></div>
 
 					<div class="container-fluid panel-body">
+
 						<div class="row info-display">
+
 							<div class="col-xs-12 col-sm-2 hidden-xs vcenter">
 								<div class="input-group wavelength_selection">
 									<div class="btn-group-vertical" role="group" aria-label="..." >
@@ -138,6 +160,7 @@
 									</div>
 								</div>
 							</div><!--
+
 						 --><div class="col-xs-12 visible-xs small-control">
 								<div class="input-group wavelength_selection">
 									<div class="btn-group" role="group" aria-label="..." >								
@@ -146,7 +169,8 @@
 									{{/each}}
 									</div>
 								</div>
-							</div><!--	        	
+							</div><!--	
+
 						 --><div class="col-xs-5 col-sm-4 vcenter drone-image">
 								<figure>
 									<div>
@@ -156,6 +180,7 @@
 									</div>
 								</figure>
 							</div><!--
+
 						 --><div class="col-xs-7 col-sm-6 vcenter ">
 								<figure>
 									<div>
@@ -165,7 +190,9 @@
 									</div>
 								</figure>
 							</div>
+
 						</div>
+
 					</div>
 
 					<div class="panel-body panel-content">
@@ -183,15 +210,6 @@
 				return ( str1 == str2 ? 'active' : '' );
 			});
 
-			Template7.registerHelper('capitalize', function (options) {
-  				var res = options.fn(this, options.data);
-				return res.toUpperCase();
-			});
-
-			Template7.registerHelper('getArrayElement', function (arr, index, options) {
-				return options.fn(arr[index]);
-			});
-
 			Template7.registerHelper('buildTable', function (dimensions, plots, options) {
 				var output = "";
 				// walk the row
@@ -203,6 +221,7 @@
 						// if we have a plot point, print it and then remove it from our array
 						for(var point = 0; point < plots.length; point++){
 							if(plots[point].grid_location[0] == row && plots[point].grid_location[1] == col){
+								// wrap the line in a td statement
 								table_data += "<td data-id='" + plots[point].id + "' class='content-region'>";
 								table_data += options.fn(plots[point], options.data);
 								table_data += "</td>"
@@ -218,6 +237,14 @@
 			Template7.registerPartial('spectrumButton', $('#spectrum_button').html());
 
 			Template7.registerPartial('tablePlot', $('#plot_table_element').html());
+
+			var select_content = function(new_content){
+				$('#main-content').fadeOut("fast", function() {
+					$(this).children('div.display-element').css('display', 'none');
+					$(new_content).css('display', 'block');
+					$(this).fadeIn();
+				});
+			};
 
 			
 			$(document).ready(function() {
@@ -241,18 +268,21 @@
 				// add the generated html to the page
 				$('#field-selection').html(compiled_plot_template(colab_obj));
 
+				select_content($('#map'));
+				
+
 				/*
 
 				helpers
 
 				*/
 
-
 				var find_plot = function(plots, id){
 					return $.grep(plots, function(elm, ind){ return elm.id == id; })[0];
 				};
 
-				var select_spectrum = function(plot, spectrum) {		
+				var select_spectrum = function(plot, spectrum) {
+					// set selected element
 					plot.selection = spectrum || 0;
 					return compiled_spectrum_template(plot);
 				};
@@ -263,11 +293,15 @@
 
 				*/
 
+				$('#navigation ul.nav').on('click', 'li', function() {
+					$(this).addClass('active').siblings().removeClass('active');
+					select_content( $("#" + $(this).data('panel')) );
+				});
 
 				$('#selection-info')
 				.on('click', 'button.spectrum-select', function(){
 					// if we didn't click on the currently selected
-					if(!$(this).hasClass('selected')){
+					if($(this).not('.selected')){
 						// get the parent panel
 						var spectrum_panel = $(this).parents('div.panel.info-window');
 						// find the plot element
@@ -277,7 +311,9 @@
 					}
 				})
 				.on('click', 'button.close', function() {
+					// get that ther' id
 					var parent_panel_id = $(this).parents('div.panel.info-window').attr('id');
+					// and click the TD element
 					$('td.content-region.selected').filter("[data-id=" + parent_panel_id + "]").click();
 				})
 				.sortable({
@@ -311,6 +347,7 @@
 						$(this).css( 'color', 'white' ).find('div.plot-delim').css('border-color','white');
 						// remove the element
 						var id = $(this).data('id');
+						// remove that guy
 						$('#' + id).remove();
 					}
 				});

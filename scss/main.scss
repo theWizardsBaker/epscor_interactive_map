@@ -8,6 +8,11 @@ body {
 		}
 }
 
+.display-element {
+	display: none;
+}
+
+
 div.vcenter {
     display: inline-block;
     vertical-align: middle;
@@ -20,6 +25,7 @@ div.vcenter {
 }
 
 nav {
+
 	&.navbar {
 		border-radius: 0;
 	}
@@ -35,6 +41,23 @@ nav {
 
 	.navbar-header {
 		margin-top: 10px;
+	}
+
+
+	.nav-pills > li > a {
+		color: #2377ba;
+		&:hover, &:focus {
+			background-color: white;
+		}
+	}
+
+	.nav-pills > li.active > a {
+		&:hover,  &:focus {
+			color: #fff;
+			background-color: #2377ba;
+		}
+		color: #fff;
+		background-color: #2377ba;
 	}
 }
 
@@ -171,5 +194,11 @@ section#selection-info{
 
 		}
 
+	}
+}
+
+#drone {
+	img.img-responsive {
+		margin: auto;
 	}
 }

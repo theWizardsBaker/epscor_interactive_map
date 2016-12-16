@@ -3,6 +3,9 @@ body {
   body .panel {
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.3); }
 
+.display-element {
+  display: none; }
+
 div.vcenter {
   display: inline-block;
   vertical-align: middle;
@@ -24,6 +27,18 @@ nav .navbar-right {
 
 nav .navbar-header {
   margin-top: 10px; }
+
+nav .nav-pills > li > a {
+  color: #2377ba; }
+  nav .nav-pills > li > a:hover, nav .nav-pills > li > a:focus {
+    background-color: white; }
+
+nav .nav-pills > li.active > a {
+  color: #fff;
+  background-color: #2377ba; }
+  nav .nav-pills > li.active > a:hover, nav .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #2377ba; }
 
 section#field-display {
   position: relative; }
@@ -106,3 +121,6 @@ section#selection-info .info-window .panel-body .small-control {
   margin-bottom: 15px; }
   section#selection-info .info-window .panel-body .small-control .input-group {
     margin: auto; }
+
+#drone img.img-responsive {
+  margin: auto; }
