@@ -11,25 +11,25 @@ var colab_obj = {
 					"type" : "RGB",
 					"camera_image" : "field_snip_rgb.jpg",
 					"graph_image" : "rgb_spectral_graph.png",
-					"description" : "RGB stuff"
+					"description" : "Something interesting here"
 				},
 				{ 
 					"type" : "NDVI",
 					"camera_image" : "field_snip_ndvi.jpg",
 					"graph_image" : "spectral_graph.png",
-					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+					"description" : "And here"
 				},
 				{ 
 					"type" : "PRI",
 					"camera_image" : "field_snip_pri.jpg",
 					"graph_image" : "spectral_graph.png",
-					"description" : "The Photochemical Reflectance Index (PRI) is an index that measures changes in carotenoid pigments that respond quickly to stress. These pigments are great indicators of how efficiently plants use light, so this index is useful for quickly detecting plant stress. PRI  uses 531 nm and 570 nm. Values range from -1 to 1, with green vegetation somewhere between -0.2 to 0.2."
+					"description" : "And here too"
 				},
 				{ 
 					"type" : "HS",
 					"camera_image" : "field_snip_hs.jpg",
 					"graph_image" : "spectral_graph.png",
-					"description" : "HS STUFF"
+					"description" : "But not here"
 				}
 			]
 		},
@@ -43,25 +43,25 @@ var colab_obj = {
 					"type" : "RGB",
 					"camera_image" : "sdfsdf",
 					"graph_image" : "sfesf",
-					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+					"description" : ""
 				},
 				{ 
 					"type" : "NDVI",
 					"camera_image" : "sdfsdf",
 					"graph_image" : "sfesf",
-					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+					"description" : ""
 				},
 				{ 
 					"type" : "PRI",
 					"camera_image" : "sdfsdf",
 					"graph_image" : "sfesf",
-					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+					"description" : ""
 				},
 				{ 
 					"type" : "HS",
 					"camera_image" : "sdfsdf",
 					"graph_image" : "sfesf",
-					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+					"description" : ""
 				}
 			]
 		},
@@ -75,25 +75,25 @@ var colab_obj = {
 					"type" : "RGB",
 					"camera_image" : "field_snip_rgb.jpg",
 					"graph_image" : "rgb_spectral_graph.png",
-					"description" : "RGB stuff"
+					"description" : ""
 				},
 				{ 
 					"type" : "NDVI",
 					"camera_image" : "field_snip_ndvi.jpg",
 					"graph_image" : "spectral_graph.png",
-					"description" : "The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8."
+					"description" : ""
 				},
 				{ 
 					"type" : "PRI",
 					"camera_image" : "field_snip_pri.jpg",
 					"graph_image" : "spectral_graph.png",
-					"description" : "The Photochemical Reflectance Index (PRI) is an index that measures changes in carotenoid pigments that respond quickly to stress. These pigments are great indicators of how efficiently plants use light, so this index is useful for quickly detecting plant stress. PRI  uses 531 nm and 570 nm. Values range from -1 to 1, with green vegetation somewhere between -0.2 to 0.2."
+					"description" : ""
 				},
 				{ 
 					"type" : "HS",
 					"camera_image" : "field_snip_hs.jpg",
 					"graph_image" : "spectral_graph.png",
-					"description" : "HS STUFF"
+					"description" : ""
 				}
 			]
 		}

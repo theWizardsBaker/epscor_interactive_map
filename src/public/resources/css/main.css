@@ -124,3 +124,6 @@ section#selection-info .info-window .panel-body .small-control {
 
 #drone img.img-responsive {
   margin: auto; }
+
+#hyperspectral figure.row {
+  text-align: center; }

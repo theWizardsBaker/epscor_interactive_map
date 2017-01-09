@@ -24,9 +24,18 @@
 					</a>
 				</div>
 				<ul class="navbar-text nav nav-pills">
-					<li role="presentation" class="active" data-panel="map"><a href="#">Home</a></li>
-					<li role="presentation" data-panel="drone"><a href="#">Drones</a></li>
-					<li role="presentation" data-panel="about"><a href="#">About</a></li>
+					<li role="presentation" class="active" data-panel="map">
+						<a href="#">Home</a>
+					</li>
+					<li role="presentation" data-panel="hyperspectral">
+						<a href="#">Camera Imaging</a>
+					</li>
+					<li role="presentation" data-panel="drone">
+						<a href="#">Drones</a>
+					</li>
+					<li role="presentation" data-panel="about">
+						<a href="#">About</a>
+					</li>
 				</ul>
 				<div class="navbar-text navbar-right">
 					<img src="public/resources/images/logos/epscor_logo.png" alt="Missouri EPSCoR" class="nav-logo"/>
@@ -102,6 +111,80 @@
 						</div>
 					</section>
 				</div>
+			</div>
+
+			<div id="hyperspectral" class="display-element">
+
+				<section class="panel panel-default">
+					<div class="panel-body">
+						Section to describe wavelength. How to read the diagrams, ect? 
+					</div>
+				</section>
+
+				<section id="wavelengths" class="panel panel-default">
+					<div class="panel-body row">
+						<div class="col-sm-6">
+							<h3>Red Green Blue</h3>
+							<div class="panel-content">
+								<figure class="row">
+									<div class="col-xs-4 col-md-4 col-lg-3 vcenter">
+										<img src="public/resources/images/field_snip_rgb.jpg" class="img-responsive spectrum">
+									</div>
+									<div class="col-xs-6 col-md-6 col-lg-5 vcenter">
+										<img src="public/resources/images/rgb_spectral_graph.png" class="img-responsive spectrum">
+									</div>
+								</figure>
+								Red Green Blue (RGB) is comprised of RED GREEN AND BLUE. WOAH!
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<h3>Normalized Difference Vegetation Index</h3>
+							<div class="panel-content">
+								<figure class="row">
+									<div class="col-xs-4 col-md-4 col-lg-3 vcenter">
+										<img src="public/resources/images/field_snip_ndvi.jpg" class="img-responsive spectrum">
+									</div>
+									<div class="col-xs-6 col-md-6 col-lg-5 vcenter">
+										<img src="public/resources/images/spectral_graph.png" class="img-responsive spectrum ">
+									</div>
+								</figure>
+								The Normalized Difference Vegetation Index (NDVI) is a reflectance index that calculates how healthy vegetation is based on a plant’s absorption and reflectance of light in near-infrared and red regions. This index uses reflectance values at 670 and 800 nanometers (nm) and ranges from -1 to 1. The common range for vegetation is 0.2 to 0.8.
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<h3>Photochemical Reflectance Index</h3>
+							<div class="panel-content">
+								<figure class="row">
+									<div class="col-xs-4 col-md-4 col-lg-3 vcenter">
+										<img src="public/resources/images/field_snip_pri.jpg" class="img-responsive spectrum ">
+									</div>
+									<div class="col-xs-6 col-md-6 col-lg-5 vcenter">
+										<img src="public/resources/images/spectral_graph.png" class="img-responsive spectrum ">
+									</div>
+								</figure>
+								The Photochemical Reflectance Index (PRI) is an index that measures changes in carotenoid pigments that respond quickly to stress. These pigments are great indicators of how efficiently plants use light, so this index is useful for quickly detecting plant stress. PRI uses 531 nm and 570 nm. Values range from -1 to 1, with green vegetation somewhere between -0.2 to 0.2.
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<h3>Hyperspectral</h3>
+							<div class="panel-content">
+								<figure class="row">
+									<div class="col-xs-4 col-md-4 col-lg-3 vcenter">
+										<img src="public/resources/images/field_snip_hs.jpg" class="img-responsive spectrum ">
+									</div>
+									<div class="col-xs-6 col-md-6 col-lg-5 vcenter">
+										<img src="public/resources/images/spectral_graph.png" class="img-responsive spectrum ">
+									</div>
+								</figure>
+								Hyperspectral (HS)
+							</div>
+						</div>
+					</div>
+				</section>
+
 			</div>
 
 			<div id="about" class="display-element">
