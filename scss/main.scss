@@ -64,10 +64,18 @@ nav {
 section#field-display {
 
 	position: relative;
+	margin-top: 40px;
 
 	.panel-body {
 		padding: 5px;
 	}
+
+	#field-display-selection{
+		position: absolute;
+		top: -42px;
+		left: 25px;
+	}
+
 
 	#field-selection {
 		position: absolute;

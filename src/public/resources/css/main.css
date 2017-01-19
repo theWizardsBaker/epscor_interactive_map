@@ -41,9 +41,14 @@ nav .nav-pills > li.active > a {
     background-color: #2377ba; }
 
 section#field-display {
-  position: relative; }
+  position: relative;
+  margin-top: 40px; }
   section#field-display .panel-body {
     padding: 5px; }
+  section#field-display #field-display-selection {
+    position: absolute;
+    top: -42px;
+    left: 25px; }
   section#field-display #field-selection {
     position: absolute;
     width: 100%;
