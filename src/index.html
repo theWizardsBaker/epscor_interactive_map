@@ -52,9 +52,9 @@
 					<section class="information col-md-12">
 						<div class="panel panel-default">
 							<div class="panel-body">
-								<h3>Page Headding Here <small>with a subheadding</small></h3>
+								<h3>Hyperspectral Imaging<small> an EPSCoR Colaboration</small></h3>
 								<p>
-									Some science info here describing the what the user should be looking at. I can animate and automatically make selections to point things out.
+									A summary of the imaging and how to use the page here. We can add animated comparisons by clicking below.
 								</p>
 								<ul>
 									<li><a href="#">Compare Plots 1 and 3</a></li>
@@ -162,6 +162,21 @@
 						</div>
 
 						<div class="col-sm-6">
+							<h3>Modified Chlorophyll Absorption Ratio Index</h3>
+							<div class="panel-content">
+								<figure class="row">
+									<div class="col-xs-5 col-md-5 col-lg-4 vcenter">
+										<img src="public/resources/images/field_snip_mcari.png" class="img-responsive spectrum ">
+									</div>
+									<div class="col-xs-6 col-md-6 col-lg-5 vcenter">
+										<img src="public/resources/images/spectral_graph.png" class="img-responsive spectrum ">
+									</div>
+								</figure>
+								The Modified Chlorophyll Absorption Ratio Index (MCARI) indicates the relative chlorophyll abundance of vegetation. MCARI minimizes soil background effects on vegetation reflectance.
+							</div>
+						</div>
+
+						<div class="col-sm-6">
 							<h3>Photochemical Reflectance Index</h3>
 							<div class="panel-content">
 								<figure class="row">
@@ -190,6 +205,7 @@
 								Hyperspectral (HS)
 							</div>
 						</div>
+
 					</div>
 				</section>
 
@@ -263,21 +279,21 @@
 								</div>
 							</div><!--	
 
-						 --><div class="col-xs-5 col-sm-4 vcenter drone-image">
+						 --><div class="col-xs-5 col-sm-5 vcenter drone-image">
 								<figure>
 									<div>
 										{{#each spectrum}}
-											<img src="public/resources/images/{{camera_image}}" class="img-responsive spectrum {{isActive @index @root.selection}}"/>
+											<img src="public/resources/images/spectrum/{{camera_image}}" class="img-responsive spectrum {{isActive @index @root.selection}}"/>
 										{{/each}}
 									</div>
 								</figure>
 							</div><!--
 
-						 --><div class="col-xs-7 col-sm-6 vcenter ">
+						 --><div class="col-xs-7 col-sm-5 vcenter ">
 								<figure>
 									<div>
 										{{#each spectrum}}
-											<img src="public/resources/images/{{graph_image}}" class="img-responsive spectrum {{isActive @index @root.selection}}" />
+											<img src="public/resources/images/spectrum/{{graph_image}}" class="img-responsive spectrum {{isActive @index @root.selection}}" />
 										{{/each}}
 									</div>
 								</figure>

@@ -1,101 +1,213 @@
 var colab_obj = {
-	"grid" : [5, 5],
+	"grid" : [8, 8],
 	"plots" : [
 		{
-			"id" : "plotting",
-			"title" : "Plot Point x",
-			"grid_location" : [0, 4],
+			"id" : "plot-1",
+			"title" : "Plot Point 1",
+			"grid_location" : [1, 6],
 			"color" : "#7cfc00",
 			"spectrum" : [
 				{ 
-					"type" : "RGB",
-					"camera_image" : "field_snip_rgb.jpg",
-					"graph_image" : "rgb_spectral_graph.png",
-					"description" : "Something interesting here"
+					"type" : "HS",
+					"camera_image" : "plot_1/field_snip_hs.png",
+					"graph_image" : "plot_1/field_snip_spectra.png",
+					"description" : "Explination for the Hyperspectral Image"
 				},
 				{ 
 					"type" : "NDVI",
-					"camera_image" : "field_snip_ndvi.jpg",
-					"graph_image" : "spectral_graph.png",
-					"description" : "And here"
+					"camera_image" : "plot_1/field_snip_ndvi.png",
+					"graph_image" : "plot_1/field_snip_spectra.png",
+					"description" : "Explination for the NDVI image"
 				},
 				{ 
-					"type" : "PRI",
-					"camera_image" : "field_snip_pri.jpg",
-					"graph_image" : "spectral_graph.png",
-					"description" : "And here too"
-				},
-				{ 
-					"type" : "HS",
-					"camera_image" : "field_snip_hs.jpg",
-					"graph_image" : "spectral_graph.png",
-					"description" : "But not here"
+					"type" : "MCARI",
+					"camera_image" : "plot_1/field_snip_mcari.png",
+					"graph_image" : "plot_1/field_snip_spectra.png",
+					"description" : "Explination for the MCARI image"
 				}
 			]
 		},
 		{
-			"id" : "something",
-			"title" : "Plot Point y",
+			"id" : "plot-2",
+			"title" : "Plot Point 2",
+			"grid_location" : [1, 7],
+			"color" : "#ffb6b0",
+			"spectrum" : [
+				{ 
+					"type" : "HS",
+					"camera_image" : "plot_2/field_snip_hs.png",
+					"graph_image" : "plot_2/field_snip_spectra.png",
+					"description" : "Explination for the Hyperspectral Image"
+				},
+				{ 
+					"type" : "NDVI",
+					"camera_image" : "plot_2/field_snip_ndvi.png",
+					"graph_image" : "plot_2/field_snip_spectra.png",
+					"description" : "Explination for the NDVI image"
+				},
+				{ 
+					"type" : "MCARI",
+					"camera_image" : "plot_2/field_snip_mcari.png",
+					"graph_image" : "plot_2/field_snip_spectra.png",
+					"description" : "Explination for the MCARI image"
+				}
+			]
+		},
+		{
+			"id" : "plot-3",
+			"title" : "Plot Point 3",
+			"grid_location" : [3, 6],
+			"color" : "#48cedc",
+			"spectrum" : [
+				{ 
+					"type" : "HS",
+					"camera_image" : "plot_3/field_snip_hs.png",
+					"graph_image" : "plot_3/field_snip_spectra.png",
+					"description" : "Explination for the Hyperspectral Image"
+				},
+				{ 
+					"type" : "NDVI",
+					"camera_image" : "plot_3/field_snip_ndvi.png",
+					"graph_image" : "plot_3/field_snip_spectra.png",
+					"description" : "Explination for the NDVI image"
+				},
+				{ 
+					"type" : "MCARI",
+					"camera_image" : "plot_3/field_snip_mcari.png",
+					"graph_image" : "plot_3/field_snip_spectra.png",
+					"description" : "Explination for the MCARI image"
+				}
+			]
+		},
+		{
+			"id" : "plot-4",
+			"title" : "Plot Point 4",
+			"grid_location" : [4, 4],
+			"color" : "#4cc936",
+			"spectrum" : [
+				{ 
+					"type" : "HS",
+					"camera_image" : "plot_4/field_snip_hs.png",
+					"graph_image" : "plot_4/field_snip_spectra.png",
+					"description" : "Explination for the Hyperspectral Image"
+				},
+				{ 
+					"type" : "NDVI",
+					"camera_image" : "plot_4/field_snip_ndvi.png",
+					"graph_image" : "plot_4/field_snip_spectra.png",
+					"description" : "Explination for the NDVI image"
+				},
+				{ 
+					"type" : "MCARI",
+					"camera_image" : "plot_4/field_snip_mcari.png",
+					"graph_image" : "plot_4/field_snip_spectra.png",
+					"description" : "Explination for the MCARI image"
+				}
+			]
+		},
+		{
+			"id" : "plot-5",
+			"title" : "Plot Point 5",
+			"grid_location" : [3, 2],
+			"color" : "#80e676",
+			"spectrum" : [
+				{ 
+					"type" : "HS",
+					"camera_image" : "plot_5/field_snip_hs.png",
+					"graph_image" : "plot_5/field_snip_spectra.png",
+					"description" : "Explination for the Hyperspectral Image"
+				},
+				{ 
+					"type" : "NDVI",
+					"camera_image" : "plot_5/field_snip_ndvi.png",
+					"graph_image" : "plot_5/field_snip_spectra.png",
+					"description" : "Explination for the NDVI image"
+				},
+				{ 
+					"type" : "MCARI",
+					"camera_image" : "plot_5/field_snip_mcari.png",
+					"graph_image" : "plot_5/field_snip_spectra.png",
+					"description" : "Explination for the MCARI image"
+				}
+			]
+		},
+		{
+			"id" : "plot-6",
+			"title" : "Plot Point 6",
 			"grid_location" : [1, 1],
-			"color" : "#bedc96",
+			"color" : "#969dff",
 			"spectrum" : [
 				{ 
-					"type" : "RGB",
-					"camera_image" : "sdfsdf",
-					"graph_image" : "sfesf",
-					"description" : ""
+					"type" : "HS",
+					"camera_image" : "plot_6/field_snip_hs.png",
+					"graph_image" : "plot_6/field_snip_spectra.png",
+					"description" : "Explination for the Hyperspectral Image"
 				},
 				{ 
 					"type" : "NDVI",
-					"camera_image" : "sdfsdf",
-					"graph_image" : "sfesf",
-					"description" : ""
+					"camera_image" : "plot_6/field_snip_ndvi.png",
+					"graph_image" : "plot_6/field_snip_spectra.png",
+					"description" : "Explination for the NDVI image"
 				},
 				{ 
-					"type" : "PRI",
-					"camera_image" : "sdfsdf",
-					"graph_image" : "sfesf",
-					"description" : ""
-				},
-				{ 
-					"type" : "HS",
-					"camera_image" : "sdfsdf",
-					"graph_image" : "sfesf",
-					"description" : ""
+					"type" : "MCARI",
+					"camera_image" : "plot_6/field_snip_mcari.png",
+					"graph_image" : "plot_6/field_snip_spectra.png",
+					"description" : "Explination for the MCARI image"
 				}
 			]
 		},
 		{
-			"id" : "another_thing",
-			"title" : "Plot Point z",
-			"grid_location" : [3, 3],
-			"color" : "#a5d9f4",
+			"id" : "plot-7",
+			"title" : "Plot Point 7",
+			"grid_location" : [6, 2],
+			"color" : "#15f71b",
 			"spectrum" : [
 				{ 
-					"type" : "RGB",
-					"camera_image" : "field_snip_rgb.jpg",
-					"graph_image" : "rgb_spectral_graph.png",
-					"description" : ""
+					"type" : "HS",
+					"camera_image" : "plot_7/field_snip_hs.png",
+					"graph_image" : "plot_7/field_snip_spectra.png",
+					"description" : "Explination for the Hyperspectral Image"
 				},
 				{ 
 					"type" : "NDVI",
-					"camera_image" : "field_snip_ndvi.jpg",
-					"graph_image" : "spectral_graph.png",
-					"description" : ""
+					"camera_image" : "plot_7/field_snip_ndvi.png",
+					"graph_image" : "plot_7/field_snip_spectra.png",
+					"description" : "Explination for the NDVI image"
 				},
 				{ 
-					"type" : "PRI",
-					"camera_image" : "field_snip_pri.jpg",
-					"graph_image" : "spectral_graph.png",
-					"description" : ""
-				},
-				{ 
-					"type" : "HS",
-					"camera_image" : "field_snip_hs.jpg",
-					"graph_image" : "spectral_graph.png",
-					"description" : ""
+					"type" : "MCARI",
+					"camera_image" : "plot_7/field_snip_mcari.png",
+					"graph_image" : "plot_7/field_snip_spectra.png",
+					"description" : "Explination for the MCARI image"
 				}
 			]
-		}
+		},
+		{
+			"id" : "plot-8",
+			"title" : "Plot Point 8",
+			"grid_location" : [5, 5],
+			"color" : "#9e58b9",
+			"spectrum" : [
+				{ 
+					"type" : "HS",
+					"camera_image" : "plot_8/field_snip_hs.png",
+					"graph_image" : "plot_8/field_snip_spectra.png",
+					"description" : "Explination for the Hyperspectral Image"
+				},
+				{ 
+					"type" : "NDVI",
+					"camera_image" : "plot_8/field_snip_ndvi.png",
+					"graph_image" : "plot_8/field_snip_spectra.png",
+					"description" : "Explination for the NDVI image"
+				},
+				{ 
+					"type" : "MCARI",
+					"camera_image" : "plot_8/field_snip_mcari.png",
+					"graph_image" : "plot_8/field_snip_spectra.png",
+					"description" : "Explination for the MCARI image"
+				}
+			]
+		},
 	]
 }

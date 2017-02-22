@@ -65,8 +65,8 @@ section#field-display {
         color: white; }
         section#field-display #field-selection div.table-responsive table td {
           vertical-align: middle;
-          width: 20%;
-          height: 20%;
+          width: 10%;
+          height: 10%;
           position: relative;
           border: 0px; }
           section#field-display #field-selection div.table-responsive table td.content-region div.plot-delim {
