@@ -1,5 +1,19 @@
 var colab_obj = {
 	"grid" : [8, 8],
+	"fields" : [
+		{
+			"title" : "6/2/2016",
+			"image" : "2016-06-02-Bradford-corn.png"
+		},
+		{
+			"title" : "6/8/2016",
+			"image" : "2016-06-28-Bradford-corn.png"
+		},
+		{
+			"title" : "7/18/2016",
+			"image" : "2016-07-18-Bradford-corn.png"
+		}
+	],
 	"plots" : [
 		{
 			"id" : "plot-1",

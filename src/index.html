@@ -54,6 +54,10 @@
 							<div class="panel-body">
 								<h3>Hyperspectral Imaging<small> an EPSCoR Colaboration</small></h3>
 								<p>
+									Bradford Farms drone flight images.
+								</p>
+								<!-- 
+								<p>
 									A summary of the imaging and how to use the page here. We can add animated comparisons by clicking below.
 								</p>
 								<ul>
@@ -61,6 +65,7 @@
 									<li><a href="#">Compare Plots 2 and 4</a></li>
 									<li><a href="#">Compare Plots 1 and 2</a></li>
 								</ul>
+								 -->
 							</div>	
 						</div>
 					</section>
@@ -68,18 +73,17 @@
 					<div class="col-md-6">
 						<section id="field-display" class="panel panel-default">
 							<div class="panel-body">
-								<div id="field-display-selection">
-									<ul class="nav nav-tabs">
-										<li role="presentation" class="active"><a href="#">RGB</a></li>
-										<li role="presentation"><a href="#">NDVI</a></li>
-										<li role="presentation"><a href="#">PRI</a></li>
-										<li role="presentation"><a href="#">HS</a></li>
-									</ul>
-								</div>
-								<div id="field-selection">
-								</div>
+								<!-- 								
+								<div id="rgb-slider">	
+									<h5 id="range-label">title</h5>
+									<input type="range" id="rgb-range" value="1" min="1" max="33">
+								</div> 
+								-->
+								<div id="field-display-selection"></div>
+								<div id="field-selection"></div>
 								<div id="rgb-field">
-									<img src="public/resources/images/rgb_field.png" class="img-responsive rounded"/>
+									<!-- <img src="public/resources/images/rgb_field.png" class="img-responsive rounded"/> -->
+									<img src="" class="img-responsive rounded"/>
 								</div>
 							</div>
 						</section>
@@ -125,7 +129,7 @@
 
 				<section class="panel panel-default">
 					<div class="panel-body">
-						Section to describe wavelength. How to read the diagrams, ect? 
+						<!-- Section to describe wavelength. How to read the diagrams, ect?  -->
 					</div>
 				</section>
 
@@ -142,7 +146,7 @@
 										<img src="public/resources/images/rgb_spectral_graph.png" class="img-responsive spectrum">
 									</div>
 								</figure>
-								Red Green Blue (RGB) is comprised of RED GREEN AND BLUE. WOAH!
+								The name of the model comes from the initials of the three additive primary colors, red, green and blue. The main purpose of the RGB color model is for the sensing, representation and display of images in electronic systems, such as televisions and computers, though it has also been used in conventional photography.
 							</div>
 						</div>
 
@@ -202,7 +206,7 @@
 										<img src="public/resources/images/spectral_graph.png" class="img-responsive spectrum ">
 									</div>
 								</figure>
-								Hyperspectral (HS)
+								Hyperspectral (HS) imaging collects and processes information from across the electromagnetic spectrum. The goal of hyperspectral imaging is to obtain the spectrum for each pixel in the image of a scene, with the purpose of finding objects, identifying materials, or detecting processes.
 							</div>
 						</div>
 
@@ -229,6 +233,14 @@
 
 		<script id="spectrum_button" type="text/template7">
 			<button class="btn btn-default spectrum-select {{isActive @index @root.selection}}" value="{{@index}}" type="button">{{type}}</button>
+		</script>
+
+		<script id="rgb_selector_template" type="text/template7">
+			<ul id="rgb-field-selector" class="nav nav-tabs">
+				{{#each this}}
+					<li role="presentation" class="{{#if @first}}active{{/if}}"><a href="#" image-path="public/resources/images/rgb_fields/{{image}}">{{title}}</a></li>
+				{{/each}}
+			</ul>
 		</script>
 
 		<script id="plot_template" type="text/template7">
@@ -379,6 +391,13 @@
 				select_content($('#map'));
 				
 
+				// get html
+				var field_selector_template = $("#rgb_selector_template").html();
+				// compile it
+				var compiled_field_selector_template = Template7.compile(field_selector_template);
+				// add html
+				$('#field-display-selection').html(compiled_field_selector_template(colab_obj.fields));
+
 				/*
 
 				helpers
@@ -429,7 +448,18 @@
 					handle: ".panel-heading"
 				});
 
+				// select the RGB image
+				$( "#rgb-field-selector" )
+				.on('click', 'li', function() {
 
+					$(this).siblings().removeClass('active');
+					$(this).addClass('active');
+
+					var image_path = $(this).find('a').attr("image-path");
+
+					$('#rgb-field img').attr("src", image_path);
+
+				});
 
 				// mouse and click elements for the field items
 				$('#field-display')
@@ -459,6 +489,16 @@
 						$('#' + id).remove();
 					}
 				});
+
+
+				/*
+
+					Startup Functions
+
+				*/
+
+				// select first element 
+				$('#field-display-selection ul').children('li').first().click();
 
 			});
 		</script>

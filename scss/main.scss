@@ -216,3 +216,14 @@ section#selection-info{
 		text-align: center;
 	}
 }
+
+input[type=range] {
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 90%;
+}
+
+#range-label {
+	margin:auto;
+}

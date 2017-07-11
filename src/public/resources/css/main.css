@@ -132,3 +132,9 @@ section#selection-info .info-window .panel-body .small-control {
 
 #hyperspectral figure.row {
   text-align: center; }
+
+input[type=range] {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%; }
